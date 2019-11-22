@@ -1,0 +1,12 @@
+$(document).ready(function() {
+
+$(".activation_zone.one").hover(function() {
+	$(".one").toggleClass("active");
+});
+
+$("#activate").click(function() {
+	$(".one").toggleClass("active");
+	$(".two").toggleClass("active");
+});
+
+});

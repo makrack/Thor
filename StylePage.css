@@ -1,0 +1,280 @@
+body {
+  margin:0px;
+}
+.id-card-wrapper {
+  height: 100vh;
+  width:100%;
+  background-color: #091214;
+  display: flex;
+}
+.id-card {
+  flex-basis: 100%;
+  max-width: 30em;
+  border: 1px solid rgb(97, 245, 245);
+  margin: auto;
+  color: #fff;
+  padding: 1em;
+  background-color: #0A2129;
+  box-shadow: 0px 0px 3px 1px #12a0a0, inset 0px 0px 3px 1px #12a0a0;
+}
+
+.profile-row {
+  display: flex;
+}
+.profile-row .dp {
+  flex-basis: 33.3%;
+  position: relative;
+  margin: 24px;
+  align-self: center;
+    text-align:center;
+  
+}
+.profile-row .desc {
+  flex-basis: 66.6%;
+}
+
+.profile-row .dp img {
+  max-width: 100%;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0px 0px 4px 3px #12a0a0;
+
+}
+.profile-row .desc {
+  padding: 1em;
+}
+
+.profile-row .dp .dp-arc-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 6px solid transparent;
+  border-top-color: #0AE0DF;
+  border-radius: 50%;
+  top: -6px;
+  left: -6px;
+
+  animation-duration: 2s;
+  animation-name: rotate-clock;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate-clock {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.profile-row .dp .dp-arc-outer {
+  position: absolute;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 6px solid transparent;
+  border-bottom-color: #0AE0DF;
+  border-radius: 50%;
+  top: -16px;
+  left: -16px;
+
+  animation-duration: 2s;
+  animation-name: rotate-anticlock;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate-anticlock {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.profile-row .desc {
+  font-family: 'Orbitron', sans-serif;
+  color: #ecfcfb;
+  text-shadow: 0px 0px 4px #12a0a0;
+  letter-spacing: 1px;
+}
+.profile-row .desc h1 {
+  margin: 0px;
+}
+
+
+article, aside, figure, footer, header, hgroup, nav, section {
+ display: block
+}
+.outer_circle {
+ width: 104px; height: 104px; background: 0; border-radius: 100%; border: 6px solid #fff; position: absolute; top: 50%; left: 50%; margin: -58px 0 0 -58px;
+}
+.activation_zone {
+ width: 115px; height: 115px; position: absolute; top: 50%; left: 50%; margin: -58px 0 0 -58px; z-index: 500;
+}
+@-webkit-keyframes one_rotate_inner_circle { 
+    0%, 100% {
+     -webkit-transform: rotate(0deg)
+    }
+    30% {
+     -webkit-transform: rotate(-110deg)
+    }
+    70% {
+     -webkit-transform: rotate(70deg)
+    }
+}
+@-webkit-keyframes one_shrink_outer_border { 
+    0%, 100% {
+     -webkit-transform: rotate(0deg)
+    }
+    50% {
+     border-width: 1px; height: 50px; width: 50px; top: 68%; left: 68%; opacity: .0;
+    }
+}
+@-webkit-keyframes two_rotate_inner_gear { 
+    0%, 100% {
+     -webkit-transform: rotate(0deg)
+    }
+    30% {
+     -webkit-transform: rotate(40deg)
+    }
+    50% {
+     -webkit-transform: rotate(110deg)
+    }
+    75% {
+     -webkit-transform: rotate(-30deg)
+    }
+}
+@-webkit-keyframes two_rotate_middle_circle { 
+    0%, 100% {
+     -webkit-transform: rotate(0deg)
+    }
+    50% {
+     -webkit-transform: rotate(-40deg)
+    }
+    70% {
+     -webkit-transform: rotate(-110deg)
+    }
+    90% {
+     -webkit-transform: rotate(30deg)
+    }
+}
+body {
+ background: #fff; padding: 20px;
+}
+.box {
+ background: #0A2129; width: 200px; height: 200px; box-sizing: border-box; float: left; margin: 0 20px 0 0; position: relative;
+}
+.one.active .inner_circle {
+ -webkit-transition: .5s ease; border-color: #ee582b;
+}
+.one.active .middle_circle {
+ -webkit-animation: one_rotate_inner_circle .9s ease
+}
+.one.active .outer_circle {
+ -webkit-animation: one_shrink_outer_border 1.5s ease
+}
+.one .middle_circle {
+ width: 44px; height: 44px; border: 18px solid #fff; border-radius: 100%; position: absolute; top: 50%; left: 50%; margin: -40px 0 0 -40px;
+}
+.one .middle_circle .cutout {
+ border-bottom: 11px solid #333; border-left: 9px solid transparent; border-right: 9px solid transparent; height: 0; width: 15px; position: absolute;
+}
+.one .middle_circle .one {
+ top: -15px; left: -11px; z-index: 200; -webkit-transform: rotate(150deg);
+}
+.one .middle_circle .two {
+ top: 18px; right: -31px; z-index: 200; -webkit-transform: rotate(-87deg);
+}
+.one .inner_circle {
+ width: 24px; height: 24px; border: 2px solid #999; border-radius: 100%; position: absolute; top: 50%; left: 50%; margin: -14px 0 0 -14px; -webkit-transition: border-color .4s ease;
+}
+.two.active .inner_circle {
+ border-color: #ee582b
+}
+.two.active .middle_circle {
+ -webkit-animation: two_rotate_inner_gear 3s ease
+}
+.two.active .middle_circle_big_add {
+ -webkit-animation: two_rotate_middle_circle 3s ease
+}
+.two .middle_circle {
+ width: 44px; height: 44px; border: 8px solid #a3a3a3; border-radius: 100%; position: absolute; top: 50%; left: 50%; margin: -30px 0 0 -30px; z-index: 200;
+}
+.two .middle_circle .cutout {
+ border-bottom: 7px solid #333; border-left: 3px solid transparent; border-right: 3px solid transparent; height: 0; width: 6px; position: absolute;
+}
+.two .middle_circle .one {
+ top: 0; left: 3px; z-index: 200; -webkit-transform: rotate(142deg);
+}
+.two .middle_circle .two {
+ top: -2px; right: 6px; z-index: 200; -webkit-transform: rotate(209deg);
+}
+.two .middle_circle .three {
+ top: 20px; right: -7px; z-index: 200; -webkit-transform: rotate(-91deg);
+}
+.two .middle_circle .four {
+ bottom: -1px; right: 4px; z-index: 200; -webkit-transform: rotate(-41deg);
+}
+.two .middle_circle .five {
+ bottom: -2px; left: 7px; z-index: 200; -webkit-transform: rotate(29deg);
+}
+.two .middle_circle .six {
+ top: 19px; left: -6px; z-index: 200; -webkit-transform: rotate(88deg);
+}
+.two .middle_circle_big {
+ width: 72px; height: 72px; border: 2px solid #fff; border-radius: 100%; position: absolute; top: 50%; left: 50%; margin: -38px 0 0 -38px; background-color: #333; z-index: 20;
+}
+.two .middle_circle_big_add {
+ position: absolute; top: 50%; left: 50%; width: 90px; height: 90px; margin: -45px 0 0 -45px;
+}
+.two .middle_circle_big_add .one {
+ width: 50px; height: 25px; background: #fff; -webkit-transform: rotate(-45deg); border-radius: 100%; position: absolute; left: -3px; top: 8px;
+}
+.two .middle_circle_big_add .one_cutout_right {
+ width: 15px; height: 20px; background: #333; -webkit-transform: rotate(-27deg); position: absolute; left: 35px; top: -4px;
+}
+.two .middle_circle_big_add .one_cutout_left {
+ width: 15px; height: 20px; background: #333; -webkit-transform: rotate(-55deg); position: absolute; left: -1px; top: 29px;
+}
+.two .middle_circle_big_add .two {
+ width: 40px; height: 15px; background: #fff; -webkit-transform: rotate(-68deg); border-radius: 100%; position: absolute; left: -7px; top: 23px;
+}
+.two .middle_circle_big_add .two_cutout_left {
+ width: 15px; height: 18px; background: #333; -webkit-transform: rotate(-75deg); position: absolute; left: -1px; top: 45px;
+}
+.two .middle_circle_big_add .three {
+ width: 40px; height: 15px; background: #fff; -webkit-transform: rotate(-95deg); border-radius: 100%; position: absolute; left: -7px; top: 40px;
+}
+.two .middle_circle_big_add .three_cutout_left {
+ width: 7px; height: 10px; background: #333; -webkit-transform: rotate(-110deg); position: absolute; left: 8px; top: 60px;
+}
+.two .middle_circle_big_add .four {
+ width: 40px; height: 15px; background: #fff; -webkit-transform: rotate(0deg); border-radius: 100%; position: absolute; left: 50%; bottom: 5px; margin-left: -20px;
+}
+.two .middle_circle_big_add .four_cutout_left {
+ width: 8px; height: 10px; background: #333; -webkit-transform: rotate(-76deg); position: absolute; left: 23px; bottom: 5px;
+}
+.two .middle_circle_big_add .four_cutout_right {
+ width: 8px; height: 10px; background: #333; -webkit-transform: rotate(76deg); position: absolute; right: 23px; bottom: 5px;
+}
+.two .middle_circle_big_add .five {
+ width: 50px; height: 25px; background: #fff; -webkit-transform: rotate(100deg); border-radius: 100%; position: absolute; right: -11px; bottom: 28px;
+}
+.two .middle_circle_big_add .five_cutout_right {
+ width: 15px; height: 10px; background: #333; -webkit-transform: rotate(-7deg); position: absolute; top: 23px; right: -1px;
+}
+.two .middle_circle_big_add .five_cutout_left {
+ width: 12px; height: 15px; background: #333; -webkit-transform: rotate(-60deg); position: absolute; bottom: 8px; right: 13px;
+}
+.two .middle_circle_big_add .six {
+ width: 30px; height: 15px; background: #fff; -webkit-transform: rotate(-117deg); border-radius: 100%; position: absolute; right: 1px; top: 22px; margin-left: -20px;
+}
+.two .middle_circle_big_add .six_cutout_right {
+ width: 10px; height: 14px; background: #333; -webkit-transform: rotate(-31deg); position: absolute; right: 12px; top: 8px;
+}
+.two .inner_circle {
+ width: 24px; height: 24px; border: 2px solid #ee582b; border-radius: 100%; position: absolute; top: 50%; left: 50%; margin: -14px 0 0 -14px; -webkit-transition: border-color .4s ease; z-index: 200;
+}
+.two .inner_inner_circle {
+ width: 6px; height: 6px; border: 2px solid #999; border-radius: 100%; position: absolute; top: 50%; left: 50%; margin: -5px 0 0 -5px; -webkit-transition: border-color .4s ease; z-index: 200;
+}
