@@ -14,3 +14,11 @@ $('#myModal').on('hide.bs.modal', function (e) {
       testAnim(anim);
 })
 });
+
+
+
+/*
+
+https://codepen.io/nhembram/pen/PzyYLL
+
+*/
