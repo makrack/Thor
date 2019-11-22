@@ -27,6 +27,12 @@ color:white;
     
 }
 
+.modal-body {
+    position: relative;
+    padding: 0px;
+	background: url(ThorBack.jpg) no-repeat fixed center;
+}
+
 .portada{
     background: url(ThorBack.jpg) no-repeat fixed center;
     -webkit-background-size: cover;
@@ -1963,3 +1969,7 @@ label{
    -moz-transform: translate(0);
    transform: translate(0);
 }
+
+
+
+
