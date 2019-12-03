@@ -6,6 +6,7 @@ function testAnim(x) {
 $(document).ready(function() {
 
 $('#myModal').on('show.bs.modal', function (e) {
+	
   var anim = "wobble";
       testAnim(anim);
 })

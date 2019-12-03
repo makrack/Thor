@@ -27,11 +27,30 @@ color:white;
     
 }
 
-.modal-body {
-    position: relative;
-    padding: 0px;
-	background: url(ThorBack.jpg) no-repeat fixed center;
+
+.modal .modal-dialog {
+    background-color: rgba(0,0,0,0);
+    margin: 0 auto;
+    min-width: 210px;
+    padding: 40px;
+    width: 100%;
+    margin-top: 100px;
+    }
+	
+.modal-backdrop
+{
+    opacity:0.9 !important;
 }
+	
+ .modal .close {
+    color: #ffffff;
+    display: block;
+    float: right;
+    font-family: Verdana;
+    font-size: 22px;
+    height: 25px;
+    text-decoration: none;
+        }
 
 .portada{
     background: url(ThorBack.jpg) no-repeat fixed center;
